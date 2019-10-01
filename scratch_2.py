@@ -1,0 +1,60 @@
+import pymysql
+from tkinter import *
+master=Tk()
+v=IntVar
+def fun():
+    username=a1.get()
+    password=b2.get()
+    fname=c2.get()
+    lname=d2.get()
+    phoneno=e2.get()
+    email=f2.get()
+    course=g2.get()
+    dob=h2.get()
+
+a1=Label (master,text="username:",font=("verdana",10,"bold"),bg="#00FFFF")
+a2=Entry(master,width=20)
+b1=Label (master,text="password:",font=("verdana",10,"bold"),bg="#00FFFF")
+b2=Entry(master,width=20)
+c1=Label (master,text="fname:",font=("verdana",10,"bold"),bg="#00FFFF")
+c2=Entry(master,width=20)
+d1=Label (master,text="lname:",font=("verdana",10,"bold"),bg="#00FFFF")
+d2=Entry(master,width=20)
+e1=Label (master,text="phoneno:",font=("verdana",10,"bold"),bg="#00FFFF")
+e2=Entry(master,width=20)
+f1=Label (master,text="email:",font=("verdana",10,"bold"),bg="#00FFFF")
+f2=Entry(master,width=20)
+g1=Label (master,text="course:",font=("verdana",10,"bold"),bg="#00FFFF")
+g2=Entry(master,width=20)
+h1=Label (master,text="dob:",font=("verdana",10,"bold"),bg="#00FFFF")
+h2=Entry(master,width=20)
+
+a1.grid(row=0,column=0)
+a2.grid(row=0,column=1)
+b1.grid(row=1,column=0)
+b2.grid(row=1,column=1)
+c1.grid(row=2,column=0)
+c2.grid(row=2,column=1)
+d1.grid(row=3,column=0)
+d2.grid(row=3,column=1)
+e1.grid(row=4,column=0)
+e2.grid(row=4,column=1)
+f1.grid(row=5,column=0)
+f2.grid(row=5,column=1)
+g1.grid(row=6,column=0)
+g2.grid(row=6,column=1)
+h1.grid(row=7,column=0)
+h2.grid(row=7,column=1)
+
+def conn():
+    global con
+    con=pymysql.connect("localhost","root","root123","dbone")
+    global cur
+    cur=con.cursor()
+def submit():
+    conn()
+    cur.execute('INSERT INTO `dbone`.`register` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)' ,(a2.get(),b2.get(),c2.get(),d2.get(),e2.get(),f2.get(),g2.get(),h2.get()))
+    con.commit()
+i1=Button(master,text="submit",command=submit)
+i1.grid(row=8,column=1)
+master.mainloop()

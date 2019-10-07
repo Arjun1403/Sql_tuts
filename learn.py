@@ -2,7 +2,7 @@ import pymysql
 from tkinter import *
 from PIL import Image, ImageTk
 import os
-from tkinter import messagebox
+# from tkinter import messageboxspurce
 master=Tk()
 v=IntVar
 master.geometry("1000x500")
@@ -16,6 +16,8 @@ l2.place(x=1, y=2)
 
 def crud1():
     os.system('python crud1.py')
+def test():
+    os.system('python test11.py')
 
 f = Frame(master, padx=20, pady=20)
 ff = Frame(master)
@@ -37,7 +39,7 @@ img2=ImageTk.PhotoImage(i3)
 
 l=Button(f,text="LEARN",image=img, font=('Verdana', 30, 'bold'),command=crud1)
 e=Button(f1,text="EXECUTE",font=('Verdana', 30, 'bold'),image=img1)
-t=Button(f2,text="TEST",font=('Verdana', 30, 'bold'),image=img2)
+t=Button(f2,text="TEST",font=('Verdana', 30, 'bold'),image=img2,command=test)
 
 f.place(anchor="c", relx=0.2, rely=0.5)
 f1.place(anchor="c", relx=0.5, rely=0.5)

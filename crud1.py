@@ -16,32 +16,47 @@ l2.place(x=1, y=2)
 f = Frame(master, padx=10, pady=10)
 ff = Frame(master)
 f.configure(bg="#f2c496")
-def createdoc():
-    os.system('python createdoc.py')
+
+def read():
+    os.system('python read11.py')
+def update():
+    os.system('python update11.py')
+
+def create():
+    os.system('python create11.py')
+def keyword():
+    os.system('python keyword.py')
+
+def func():
+    os.system('python function.py')
+
+
+def delete():
+    os.system('python delete11.py')
 
 
 def submit1():
     master.destroy()
-    fourth= Tk()
-    print("create")
-    createdoc()
-    fourth.mainloop()
+    create()
+
 
 def submit2():
     master.destroy()
-    fifth= Tk()
-    print("read")
-    fifth.mainloop()
+    read()
+
 def submit3():
     master.destroy()
-    sixth= Tk()
-    print("update")
-    sixth.mainloop()
+    update()
+
 def submit4():
     master.destroy()
-    seven= Tk()
-    print("delete")
-    seven.mainloop()
+    delete()
+def submit5():
+    master.destroy()
+    func()
+def submit6():
+    master.destroy()
+    keyword()
 x=Label(master,text="LEARN",font=("verdana",20,"bold"),bg="#ffFFFF")
 a1=Label(master,text="CREATE TABLE",font=("verdana",10,"bold"),bg="#ffFFFF")
 i1=Button(master,text="DOCUMENTATION",command=submit1)
@@ -51,6 +66,10 @@ c1=Label (master,text="UPDATE TABLE",font=("verdana",10,"bold"),bg="#ffFFFF")
 i3=Button(master,text="DOCUMENTATION",command=submit3)
 d1=Label (master,text="DELETE TABLE",font=("verdana",10,"bold"),bg="#ffFFFF")
 i4=Button(master,text="DOCUMENTATION",command=submit4)
+e1=Label (master,text="SQL KEYWORDS",font=("verdana",10,"bold"),bg="#ffFFFF")
+i5=Button(master,text="DOCUMENTATION",command=submit5)
+f1=Label (master,text="SQL FUNCTIONS",font=("verdana",10,"bold"),bg="#ffFFFF")
+i6=Button(master,text="DOCUMENTATION",command=submit6)
 x.place(x=400,y=200)
 a1.place(x=300,y=300)
 i1.place(x=450,y=300)
@@ -60,4 +79,8 @@ c1.place(x=300,y=500)
 i3.place(x=450,y=500)
 d1.place(x=300,y=600)
 i4.place(x=450,y=600)
+e1.place(x=300,y=700)
+i5.place(x=450,y=700)
+f1.place(x=300,y=800)
+i6.place(x=450,y=800)
 mainloop()

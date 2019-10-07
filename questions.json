@@ -1,0 +1,21 @@
+{
+  "Questions": [
+    {
+      "question": "What is your name",
+      "options": ["Arjun","greeshma","soorya","bindhya"],
+      "answer_index": 1
+    },
+    {
+      "question": "What is cat name",
+      "options": ["Arjun","greeshma","soorya","bindhya"],
+      "answer_index": 0
+    },
+    {
+      "question": "What is dog name",
+      "options": ["Arjun","greeshma","soorya","bindhya"],
+      "answer_index": 3
+    }
+
+
+  ]
+}

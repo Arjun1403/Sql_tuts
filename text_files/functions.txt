@@ -1,0 +1,174 @@
+                                  SQL FUNCTIONS
+
+
+1.ASCII() Function
+
+Definition and Usage
+The ASCII() function returns the ASCII value for the specific character.
+
+Syntax
+ASCII(character)
+
+Example
+Return the ASCII value of the first character in "CustomerName":
+
+SELECT ASCII(CustomerName) AS NumCodeOfFirstChar
+FROM Customers;
+
+
+2.CHAR_LENGTH() Function
+
+Definition and Usage
+The CHAR_LENGTH() function return the length of a string (in characters).
+
+Note: This function is equal to the CHARACTER_LENGTH() function.
+
+Syntax
+CHAR_LENGTH(string)
+
+Example
+Return the length of the string:
+
+SELECT CHAR_LENGTH("SQL Tutorial") AS LengthOfString;
+
+
+3.CONCAT() Function
+
+Definition and Usage
+The CONCAT() function adds two or more expressions together.
+
+Note: Also look at the CONCAT_WS() function.
+
+Syntax
+CONCAT(expression1, expression2, expression3,...)
+
+Example
+Add several strings together:
+
+SELECT CONCAT("SQL ", "Tutorial ", "is ", "fun!") AS ConcatenatedString;
+
+4.LCASE() Function
+
+Example
+Convert the text to lower-case:
+
+SELECT LCASE("SQL Tutorial is FUN!");
+
+Definition and Usage
+The LCASE() function converts a string to lower-case.
+
+Note: The LOWER() function is a synonym for the LCASE() function.
+
+Syntax
+LCASE(text)
+
+5.UCASE() Function
+
+Example
+Convert the text to upper-case:
+
+SELECT UCASE("SQL Tutorial is FUN!");
+Definition and Usage
+The UCASE() function converts a string to upper-case.
+
+Note: This function is equal to the UPPER() function.
+
+Syntax
+UCASE(text)
+
+6.STRCMP() Function
+
+Example
+Compare two strings:
+
+SELECT STRCMP("SQL Tutorial", "SQL Tutorial");
+Definition and Usage
+The STRCMP() function compares two strings.
+
+Syntax
+STRCMP(string1, string2)
+
+
+7. UPPER() Function
+
+Example
+Convert the text to upper-case:
+
+SELECT UPPER("SQL Tutorial is FUN!");
+Definition and Usage
+The UPPER() function converts a string to upper-case.
+
+Note: This function is equal to the UCASE() function.
+
+Syntax
+UPPER(text)
+
+8.TRIM() Function
+
+Example
+Remove leading and trailing spaces from a string:
+
+SELECT TRIM('    SQL Tutorial    ') AS TrimmedString;
+Definition and Usage
+The TRIM() function removes leading and trailing spaces from a string.
+
+Syntax
+TRIM(string)
+
+9.REPLACE() Function
+
+Example
+Replace "SQL" with "HTML":
+
+SELECT REPLACE("SQL Tutorial", "SQL", "HTML");
+Definition and Usage
+The REPLACE() function replaces all occurrences of a substring within a string, with a new substring.
+
+Note: This function performs a case-sensitive replacement.
+
+Syntax
+REPLACE(string, from_string, new_string)
+
+10.LTRIM() Function
+
+Example
+Remove leading spaces from a string:
+
+SELECT LTRIM("     SQL Tutorial") AS LeftTrimmedString;
+Definition and Usage
+The LTRIM() function removes leading spaces from a string.
+
+Syntax
+LTRIM(string)
+
+
+11.POSITION() Function
+
+Example
+Search for "3" in string "MYSchools", and return position:
+
+SELECT POSITION("3" IN "MYSchools") AS MatchPosition;
+Definition and Usage
+The POSITION() function returns the position of the first occurrence of a substring in a string.
+
+If the substring is not found within the original string, this function returns 0.
+
+This function performs a case-insensitive search.
+
+Note: The LOCATE() function is equal to the POSITION() function.
+
+Syntax
+POSITION(substring IN string)
+
+12.FIND_IN_SET() Function
+
+Example
+Search for "q" within the list of strings:
+
+SELECT FIND_IN_SET("q", "s,q,l");
+Definition and Usage
+The FIND_IN_SET() function returns the position of a string within a list of strings.
+
+Syntax
+FIND_IN_SET(string, string_list)
+

@@ -1,7 +1,7 @@
-from Sql.create import Create
-from Sql.delete import Delete
-from Sql.read import Read
-from Sql.update import Update
+from Sql.execute import Create
+from Sql.obsolete_files.delete import Delete
+from Sql.obsolete_files.read import Read
+from Sql.obsolete_files.update import Update
 
 
 def main():

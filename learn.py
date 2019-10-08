@@ -25,6 +25,10 @@ def test():
     os.system('python test11.py')
 
 
+def execute():
+    os.system('python execute.py')
+
+
 f = Frame(master, padx=20, pady=20)
 ff = Frame(master)
 
@@ -42,7 +46,7 @@ i3 = Image.open(os.path.join(root_path, "t1.jpg"))
 img2 = ImageTk.PhotoImage(i3)
 
 l = Button(f, text="LEARN", image=img, font=('Verdana', 30, 'bold'), command=crud1)
-e = Button(f1, text="EXECUTE", font=('Verdana', 30, 'bold'), image=img1)
+e = Button(f1, text="EXECUTE", font=('Verdana', 30, 'bold'), image=img1, command=execute)
 t = Button(f2, text="TEST", font=('Verdana', 30, 'bold'), image=img2, command=test)
 
 f.place(anchor="c", relx=0.2, rely=0.5)

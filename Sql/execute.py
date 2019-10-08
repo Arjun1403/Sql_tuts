@@ -21,11 +21,11 @@ class Execute:
 
                 cursor.execute(query[:-1])
 
-                print(cursor.column_names)
+                # print(cursor.column_names)
 
                 print('-------------------------------------------')
                 output_string = '-------------------------------------------\n'
-                output_string += "    ".join(map(str, cursor.column_names))
+                # output_string += "    ".join(map(str, cursor.column_names))
                 output_string += '\n-------------------------------------------\n'
                 for row in cursor:
                     print("    ".join(map(str, row)))

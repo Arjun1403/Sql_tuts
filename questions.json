@@ -1,21 +1,84 @@
 {
   "Questions": [
     {
-      "question": "What is your name",
-      "options": ["Arjun","greeshma","soorya","bindhya"],
-      "answer_index": 1
+      "question": "You can add a row using SQL in a database with which of the following?",
+      "options": ["ADD","CREATE","INSERT","MAKE"],
+      "answer_index": 2
     },
     {
-      "question": "What is cat name",
-      "options": ["Arjun","greeshma","soorya","bindhya"],
+      "question": "Which of the following is the correct order of keywords for SQL SELECT statements?",
+      "options": ["SELECT, FROM, WHERE.","FROM, WHERE, SELECT","WHERE, FROM,SELECT.","SELECT,WHERE,FROM"],
       "answer_index": 0
     },
     {
-      "question": "What is dog name",
-      "options": ["Arjun","greeshma","soorya","bindhya"],
+      "question": " A subquery in an SQL SELECT statement is enclosed in:",
+      "options": ["braces -- {...}.","CAPITAL LETTERS.","parenthesis -- (...) .","brackets -- [...]."],
+      "answer_index": 2
+    },
+    {
+      "question": "The SQL keyword BETWEEN is used",
+      "options": ["for ranges.","to limit the columns displayed.","as a wildcard.","None of the above is correct."],
+      "answer_index": 0
+    },
+    {
+      "question": "SQL is:",
+      "options": ["a programming language.","an operating system.","a data sublanguage.","a DBMS."],
+      "answer_index": 2
+    },
+    {
+      "question": "The result of a SQL SELECT statement is a(n) ________ ",
+      "options": ["report","form","file","table"],
       "answer_index": 3
+    },
+    {
+      "question": "The command to remove rows from a table 'CUSTOMER' is:",
+      "options": ["REMOVE FROM CUSTOMER ...","DROP FROM CUSTOMER ...","DELETE FROM CUSTOMER WHERE ...","UPDATE FROM CUSTOMER"],
+      "answer_index": 2
+    },
+    {
+      "question": "Which of the following are the five built-in functions provided by SQL?",
+      "options": ["COUNT, SUM, AVG, MAX, MIN","SUM, AVG, MIN, MAX, MULT","SUM, AVG, MULT, DIV, MIN","SUM, AVG, MIN, MAX, NAME"],
+      "answer_index": 0
+    },
+    {
+      "question": "The SQL WHERE clause",
+      "options": ["limits the column data that are returned.","limits the row data are returned.","Both A and B are correct.","Neither A nor B are correct"],
+      "answer_index": 1
+    },
+    {
+      "question": "To remove duplicate rows from the results of an SQL SELECT statement, the ________ qualifier specified must be included",
+      "options": ["ONLY","UNIQUE","DISTINCT","SINGLE"],
+      "answer_index": 2
+    },
+    {
+      "question": " SQL query and modification commands make up a(n) ______",
+      "options": ["DDL","DML","HTML","XML"],
+      "answer_index": 1
+    },
+    {
+      "question": "Which of the following do you need to consider when you make a table in SQL? ",
+      "options": ["Data types","Primary keys","Default values","All of the above"],
+      "answer_index": 3
+    },
+    {
+      "question": "When three or more AND and OR conditions are combined, it is easier to use the SQL keyword(s): ",
+      "options": ["LIKE only.","IN only.","NOT IN only.","Both IN and NOT IN."],
+      "answer_index": 3
+    },
+    {
+      "question": "SQL can be used to:",
+      "options": ["create database structures only.","query database data only.","modify database data only.","All of the above can be done by SQL."],
+      "answer_index": 3
+    },
+    {
+      "question": "The SQL statement that queries or reads data from a table is ________",
+      "options": ["SELECT","READ","QUERY","None of the above is correct"],
+      "answer_index": 0
+    },
+    {
+      "question": "The command to eliminate a table from a database is:",
+      "options": ["REMOVE TABLE CUSTOMER;","DROP TABLE CUSTOMER;","DELETE TABLE CUSTOMER;","UPDATE TABLE CUSTOMER;"],
+      "answer_index": 2
     }
-
-
   ]
 }

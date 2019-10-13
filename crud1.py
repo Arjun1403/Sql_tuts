@@ -12,13 +12,10 @@ v = IntVar
 
 master.geometry("1480x700")
 master.configure(bg='#4db4f0')
-i1 = Image.open(os.path.join(image_root_path, "q.jpg"))
-q = ImageTk.PhotoImage(i1)
-l2 = Label(master, image=q, width=1480, height=700)
+i1 = Image.open(os.path.join(image_root_path, "q1.jpg"))
+q1 = ImageTk.PhotoImage(i1)
+l2 = Label(master, image=q1, width=1480, height=700)
 l2.place(x=1, y=2)
-f = Frame(master, padx=10, pady=10)
-ff = Frame(master)
-f.configure(bg="#f2c496")
 
 
 def read():
@@ -73,32 +70,30 @@ def submit6():
     master.destroy()
     func()
 
-f = Frame(master, padx=12, pady=14)
-ff = Frame(master)
-f.configure(bg='#E7EFF3')
-a1=Label(master,text="CREATE TABLE",font=("times",13,"bold"),bg="#ffFFFF")
-i1=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit1,bd=3)
-b1=Label (master,text="READ TABLE",font=("times",13,"bold"),bg="#ffFFFF")
-i2=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit2,bd=3)
-c1=Label (master,text="UPDATE TABLE",font=("times",13,"bold"),bg="#ffFFFF")
-i3=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit3,bd=3)
-d1=Label (master,text="DELETE TABLE",font=("times",13,"bold"),bg="#ffFFFF")
-i4=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit4,bd=3)
-e1=Label (master,text="SQL KEYWORDS",font=("times",13,"bold"),bg="#ffFFFF")
-i5=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit5,bd=3)
-f1=Label (master,text="SQL FUNCTIONS",font=("times",13,"bold"),bg="#ffFFFF")
-i6=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit6,bd=3)
 
-a1.place(x=300,y=300)
-i1.place(x=450,y=300)
-b1.place(x=300,y=400)
-i2.place(x=450,y=400)
-c1.place(x=300,y=500)
-i3.place(x=450,y=500)
-d1.place(x=300,y=600)
-i4.place(x=450,y=600)
-e1.place(x=700,y=300)
-i5.place(x=850,y=300)
-f1.place(x=700,y=400)
-i6.place(x=850,y=400)
-mainloop()
+
+i1=Button(master,text="DOCUMENTATION",font=("times",14,"bold"),command=submit1,bd=8)
+
+i2=Button(master,text="DOCUMENTATION",font=("times",14,"bold"),command=submit2,bd=8)
+
+i3=Button(master,text="DOCUMENTATION",font=("times",14,"bold"),command=submit3,bd=8)
+
+i4=Button(master,text="DOCUMENTATION",font=("times",14,"bold"),command=submit4,bd=8)
+
+i5=Button(master,text="DOCUMENTATION",font=("times",14,"bold"),command=submit5,bd=8)
+
+i6=Button(master,text="DOCUMENTATION",font=("times",14,"bold"),command=submit6,bd=8)
+
+
+i1.place(x=550,y=240)
+
+i2.place(x=550,y=330)
+
+i3.place(x=550,y=420)
+
+i4.place(x=550,y=500)
+
+i5.place(x=1140,y=230)
+
+i6.place(x=1140,y=310)
+master.mainloop()

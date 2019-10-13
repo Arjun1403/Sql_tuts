@@ -26,8 +26,8 @@ def connect():
     cur = con.cursor()
 
 
-a = Label(f, text='Username:', font=('Verdana', 14, 'bold'), bg='#E8F1F2')
-b = Label(f, text='Password:', font=('Verdana', 14, 'bold'), bg='#E8F1F2')
+a = Label(f, text='Username:', font=('Verdana', 14, 'bold'), bg='#dddddd')
+b = Label(f, text='Password:', font=('Verdana', 14, 'bold'), bg='#dddddd')
 c = Entry(f, width=20, bd=4, bg='#faf5e6')
 d = Entry(f, width=20, bd=4, bg='#faf5e6', show='*')
 

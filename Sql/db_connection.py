@@ -1,13 +1,13 @@
-import mysql.connector
-
+# import mysql.connector
+import pymysql
 from .config import database_config
 
 
 def getConnection():
-    mydb = mysql.connector.connect(
+    mydb = pymysql.connect(
         host=database_config['Host'],
         user=database_config['User'],
-        password=database_config['Password']
+        passwd=database_config['Password']
     )
 
     return mydb

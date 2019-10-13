@@ -6,11 +6,11 @@ from tkinter import messagebox
 import pymysql
 from PIL import Image, ImageTk
 
-root_path = os.path.join(os.path.dirname(__file__), 'images')
+root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'images')
 master = Tk()
 master.geometry("3000x1000")
 master.configure(bg='#4db4f0')
-i1 = Image.open(os.path.join(root_path, "l1.png"))
+i1 = Image.open(os.path.join(root_path, "DONE1.png"))
 DONE1 = ImageTk.PhotoImage(i1)
 l2 = Label(master, image=DONE1, width=3000, height=1000)
 l2.place(x=1, y=2)

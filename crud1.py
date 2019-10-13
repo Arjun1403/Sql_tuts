@@ -7,15 +7,14 @@ image_root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'imag
 docs_root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'open_docs')
 master = Tk()
 v = IntVar
-master.geometry("1000x500")
-master.coe1 = Label(master, text="phonenumber:", font=("verdana", 10, "bold"), bg="#00FFFF")
-master.configure(bg='#4db4f0')
 
-master.geometry("3000x1000")
+
+
+master.geometry("1480x700")
 master.configure(bg='#4db4f0')
-i1 = Image.open(os.path.join(image_root_path, "d.png"))
-d = ImageTk.PhotoImage(i1)
-l2 = Label(master, image=d, width=3000, height=1000)
+i1 = Image.open(os.path.join(image_root_path, "q.jpg"))
+q = ImageTk.PhotoImage(i1)
+l2 = Label(master, image=q, width=1480, height=700)
 l2.place(x=1, y=2)
 f = Frame(master, padx=10, pady=10)
 ff = Frame(master)
@@ -68,27 +67,28 @@ def submit4():
 
 def submit5():
     master.destroy()
-    func()
-
+    keyword()
 
 def submit6():
     master.destroy()
-    keyword()
+    func()
 
-x=Label(master,text="LEARN",font=("verdana",20,"bold"),bg="#ffFFFF")
-a1=Label(master,text="CREATE TABLE",font=("verdana",10,"bold"),bg="#ffFFFF")
-i1=Button(master,text="DOCUMENTATION",command=submit1)
-b1=Label (master,text="READ TABLE",font=("verdana",10,"bold"),bg="#ffFFFF")
-i2=Button(master,text="DOCUMENTATION",command=submit2)
-c1=Label (master,text="UPDATE TABLE",font=("verdana",10,"bold"),bg="#ffFFFF")
-i3=Button(master,text="DOCUMENTATION",command=submit3)
-d1=Label (master,text="DELETE TABLE",font=("verdana",10,"bold"),bg="#ffFFFF")
-i4=Button(master,text="DOCUMENTATION",command=submit4)
-e1=Label (master,text="SQL KEYWORDS",font=("verdana",10,"bold"),bg="#ffFFFF")
-i5=Button(master,text="DOCUMENTATION",command=submit5)
-f1=Label (master,text="SQL FUNCTIONS",font=("verdana",10,"bold"),bg="#ffFFFF")
-i6=Button(master,text="DOCUMENTATION",command=submit6)
-x.place(x=400,y=200)
+f = Frame(master, padx=12, pady=14)
+ff = Frame(master)
+f.configure(bg='#E7EFF3')
+a1=Label(master,text="CREATE TABLE",font=("times",13,"bold"),bg="#ffFFFF")
+i1=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit1,bd=3)
+b1=Label (master,text="READ TABLE",font=("times",13,"bold"),bg="#ffFFFF")
+i2=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit2,bd=3)
+c1=Label (master,text="UPDATE TABLE",font=("times",13,"bold"),bg="#ffFFFF")
+i3=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit3,bd=3)
+d1=Label (master,text="DELETE TABLE",font=("times",13,"bold"),bg="#ffFFFF")
+i4=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit4,bd=3)
+e1=Label (master,text="SQL KEYWORDS",font=("times",13,"bold"),bg="#ffFFFF")
+i5=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit5,bd=3)
+f1=Label (master,text="SQL FUNCTIONS",font=("times",13,"bold"),bg="#ffFFFF")
+i6=Button(master,text="DOCUMENTATION",font=("times",11,"bold"),command=submit6,bd=3)
+
 a1.place(x=300,y=300)
 i1.place(x=450,y=300)
 b1.place(x=300,y=400)

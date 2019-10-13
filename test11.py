@@ -1,8 +1,14 @@
 from tkinter import Tk, Frame, Label, Button
 import json
+import os
+import pymysql
+
 
 from time import sleep
+window = Tk()
 
+window.geometry("3000x1000")
+window.configure(bg='#999999')
 
 class Question:
     def __init__(self, question, answers, correctLetter):
@@ -84,7 +90,7 @@ right = 0
 questions = get_questions("questions.json")
 number_of_questions = len(questions)
 
-window = Tk()
-button = Button(window, text="Start", command=askQuestion)
-button.pack()
+
+button = Button(window, text="GET STARTED",font=('times', 30, 'bold'), command=askQuestion,bd=20)
+button.place(x=500,y=300)
 window.mainloop()

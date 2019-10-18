@@ -18,13 +18,14 @@ l2.place(x=1, y=2)
 def admin():
     os.system('python adminlog.py')
 
+
 def user():
     os.system('python login.py')
 
 
-l = Button(master, text="ADMIN", font=('Verdana', 35, 'bold'), command=admin,bd=15,bg="#d2a679")
-e = Button(master, text="USER", font=('Verdana', 35, 'bold'), command=user,bd=15,bg="#d2a679")
+l = Button(master, text="ADMIN", font=('Verdana', 35, 'bold'), command=admin, bd=15, bg="#d2a679")
+e = Button(master, text="USER", font=('Verdana', 35, 'bold'), command=user, bd=15, bg="#d2a679")
 
-l.place(x=800,y=250)
-e.place(x=800,y=450)
+l.place(x=800, y=250)
+e.place(x=800, y=450)
 mainloop()

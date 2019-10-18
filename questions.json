@@ -79,6 +79,186 @@
       "question": "The command to eliminate a table from a database is:",
       "options": ["REMOVE TABLE CUSTOMER;","DROP TABLE CUSTOMER;","DELETE TABLE CUSTOMER;","UPDATE TABLE CUSTOMER;"],
       "answer_index": 2
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
+    },
+    {
+      "question": "repeat",
+      "options": ["yes","no"],
+      "answer_index": 0
     }
   ]
 }

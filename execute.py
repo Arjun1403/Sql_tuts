@@ -1,29 +1,33 @@
 from tkinter import *
-from tkinter.messagebox import askyesnocancel
-
+from tkinter.messagebox import askyesno
+from PIL import Image,ImageTk
+import os
 from Sql.execute import execute_sql
 
-
+root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'images')
 def register():
     print("inside register")
 
 
-def check():
+def check(master=Tk()):
     def try_it_out():
         query = c.get()
         output_result = execute_sql.func_run(query=query)
         print("inside login")
         b.grid(row=1, column=2)
-        d = Label(f, height=25, width=100, text=output_result)
+        d = Label(f, height=25, width=50, text=output_result)
         d.grid(row=20, column=2)
-        value = askyesnocancel(title="query", message="wanna execute in new window?")
-        if value:
-            check()
-        elif value is False:
-            master.destroy()
+        # value = askyesno(title="SQL window", message="wanna execute in new window?")
+        # if value:
+        #     master.destroy()
+        #     check(Tk())
 
-    master = Tk()
+
     master.geometry("3000x1000")
+    i1 = Image.open(os.path.join(root_path, "fi.jpg"))
+    fi = ImageTk.PhotoImage(i1)
+    l2 = Label(master, image=fi)
+    l2.place(x=1, y=2)
     # master.configure(bg='#4db4f0')
     f = Frame(master, padx=12, pady=14)
     ff = Frame(master)

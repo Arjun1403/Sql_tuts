@@ -25,7 +25,7 @@ def register():
     print("inside register")
 
 
-def check(master=Tk()):
+def check():
     def try_it_out():
         query = c.get()
         output_result = execute_sql.func_run(query=query)

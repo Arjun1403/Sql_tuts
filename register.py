@@ -1,12 +1,14 @@
-import pymysql
+
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
+
 from main_connection import connect
+
 import os
-import re
 
 connection, cur = connect()
+
 master = Tk()
 v = IntVar
 root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'images')
@@ -19,40 +21,29 @@ l2.place(x=1, y=2)
 
 f = Frame(master, padx=50, pady=50)
 ff = Frame(master)
-f.configure(bg="#E7EFF3")
 
+f.configure(bg="#dddddd")
 
 def learn():
     os.system('python learn.py')
 
-
-def fun():
-    username = a2.get()
-    password = b2.get()
-    fname = c2.get()
-    lname = d2.get()
-    phoneno = e2.get()
-    email = f2.get()
-    course = g2.get()
-    dob = h2.get()
-
-
-a = Label(ff, text="REGISTER_FORM", font=("times", 20, "bold"), bg="#E7EFF3")
-a1 = Label(f, text="USERNAME", font=("verdana", 14, "bold"), bg="#E7EFF3")
+a = Label(ff, text="REGISTER_FORM", font=("times", 20, "bold"), bg="#E7EFF3 ")
+a1 = Label(f, text="USERNAME", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 a2 = Entry(f, width=24, bd=4)
-b1 = Label(f, text="PASSWORD", font=("verdana", 14, "bold"), bg="#E7EFF3")
+b1 = Label(f, text="PASSWORD", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 b2 = Entry(f, width=24, bd=4)
-c1 = Label(f, text="FIRST_NAME", font=("verdana", 14, "bold"), bg="#E7EFF3")
+c1 = Label(f, text="FIRST_NAME", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 c2 = Entry(f, width=24, bd=4)
-d1 = Label(f, text="LAST_NAME", font=("verdana", 14, "bold"), bg="#E7EFF3")
+d1 = Label(f, text="LAST_NAME", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 d2 = Entry(f, width=24, bd=4)
-e1 = Label(f, text="PHONE_NUMBER", font=("verdana", 14, "bold"), bg="#E7EFF3")
+e1 = Label(f, text="PHONE_NUMBER", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 e2 = Entry(f, width=24, bd=4)
-f1 = Label(f, text="EMAIL", font=("verdana", 14, "bold"), bg="#E7EFF3")
+f1 = Label(f, text="EMAIL", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 f2 = Entry(f, width=24, bd=4)
-g1 = Label(f, text="COURSE", font=("verdana", 14, "bold"), bg="#E7EFF3")
+g1 = Label(f, text="COURSE", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 g2 = Entry(f, width=24, bd=4)
-h1 = Label(f, text="DOB", font=("verdana", 14, "bold"), bg="#E7EFF3")
+h1 = Label(f, text="DOB", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
+
 h2 = Entry(f, width=24, bd=4)
 ff.place(anchor="s", relx=0.5, rely=0.35)
 f.place(anchor="c", relx=0.7, rely=1)
@@ -76,10 +67,9 @@ h2.grid(row=14, column=1)
 
 
 def submit():
-    cur.execute(
-        'INSERT INTO `register` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
+    cur.execute('INSERT INTO `dbone`.`register1` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
         (a2.get(), b2.get(), c2.get(), d2.get(), e2.get(), f2.get(), g2.get(), h2.get()))
-    connection.commit()
+    con.commit()
     messagebox.showinfo("success", "login success!!!!")
     learn()
 

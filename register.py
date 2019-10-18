@@ -2,9 +2,12 @@
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
-from main_connection import cur, con
+
+from main_connection import connect
+
 import os
 
+connection, cur = connect()
 
 master = Tk()
 v = IntVar
@@ -18,12 +21,11 @@ l2.place(x=1, y=2)
 
 f = Frame(master, padx=50, pady=50)
 ff = Frame(master)
-f.configure(bg="#dddddd ")
+
+f.configure(bg="#dddddd")
 
 def learn():
     os.system('python learn.py')
-
-
 
 a = Label(ff, text="REGISTER_FORM", font=("times", 20, "bold"), bg="#E7EFF3 ")
 a1 = Label(f, text="USERNAME", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
@@ -41,6 +43,7 @@ f2 = Entry(f, width=24, bd=4)
 g1 = Label(f, text="COURSE", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
 g2 = Entry(f, width=24, bd=4)
 h1 = Label(f, text="DOB", font=("verdana", 14, "bold"), bg="#E7EFF3 ")
+
 h2 = Entry(f, width=24, bd=4)
 ff.place(anchor="s", relx=0.5, rely=0.35)
 f.place(anchor="c", relx=0.7, rely=1)
@@ -64,8 +67,7 @@ h2.grid(row=14, column=1)
 
 
 def submit():
-    cur.execute(
-        'INSERT INTO `dbone`.`register1` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
+    cur.execute('INSERT INTO `dbone`.`register1` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
         (a2.get(), b2.get(), c2.get(), d2.get(), e2.get(), f2.get(), g2.get(), h2.get()))
     con.commit()
     messagebox.showinfo("success", "login success!!!!")

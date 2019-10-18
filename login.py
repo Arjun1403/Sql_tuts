@@ -1,8 +1,10 @@
 import os
 from tkinter import *
 from tkinter import messagebox
-from main_connection import con, cur
+from main_connection import connect
 from PIL import Image, ImageTk
+
+connection, cur = connect()
 
 root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'images')
 master = Tk()

@@ -1,10 +1,10 @@
 import os
 from tkinter import *
 from tkinter import messagebox
-
-# from PIL import Image, ImageTk
-import pymysql
+from main_connection import connect
 from PIL import Image, ImageTk
+
+connection, cur = connect()
 
 root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'images')
 master = Tk()
@@ -19,13 +19,6 @@ f = Frame(master, padx=16, pady=16)
 ff = Frame(master)
 f.configure(bg='#dddddd')
 
-
-def connect():
-    global cur
-    con = pymysql.connect("localhost", "root", "root123", "dbone")
-    cur = con.cursor()
-
-
 a = Label(f, text='Username:', font=('Verdana', 14, 'bold'), bg='#dddddd')
 b = Label(f, text='Password:', font=('Verdana', 14, 'bold'), bg='#dddddd')
 c = Entry(f, width=20, bd=4, bg='#faf5e6')
@@ -33,7 +26,6 @@ d = Entry(f, width=20, bd=4, bg='#faf5e6', show='*')
 
 
 def login():
-    connect()
     username = c.get()
     password = d.get()
     cur.execute("select username,password from register")
@@ -86,6 +78,5 @@ d.grid(row=1, column=2)
 e.grid(row=2, column=2)
 x.grid(row=0, column=0, rowspan=3)
 v.grid(row=2, column=1)
-
 
 mainloop()

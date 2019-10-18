@@ -1,5 +1,6 @@
 database_config = {
     'Host': 'localhost',
-    'User': 'root',
-    'Password': 'root123'
+    'User': 'user368',
+    'Password': 'Qwerty12345!',
+    'DatabaseName': 'tutorial'
 }

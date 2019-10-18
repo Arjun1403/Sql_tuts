@@ -28,7 +28,7 @@ d = Entry(f, width=20, bd=4, bg='#faf5e6', show='*')
 def login():
     username = c.get()
     password = d.get()
-    cur.execute("select username,password from register1")
+    cur.execute("select username,password from register")
     var = cur.fetchall()
 
     if username == '' or password == '':
@@ -40,7 +40,7 @@ def login():
         learn()
         second.mainloop()
     else:
-        cur.execute("select uname,pword from login")
+        cur.execute("select username,password from login")
         var = cur.fetchall()
         if username == '' or password == '':
             messagebox.showerror("Error", "Fields cannot be empty!")

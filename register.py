@@ -81,7 +81,7 @@ def validation(username, password, phonenumber):
 def submit():
     validation(username=a2.get(), password=b2.get(), phonenumber=e2.get())
     cur.execute(
-        'INSERT INTO `dbone`.`register1` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
+        'INSERT INTO `tutorial`.`register` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
         (a2.get(), b2.get(), c2.get(), d2.get(), e2.get(), f2.get(), g2.get(), h2.get()))
 
     connection.commit()

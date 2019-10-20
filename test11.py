@@ -2,18 +2,18 @@ from tkinter import Tk, Frame, Label, Button
 import json
 import random
 import os
-import pymysql
-
-from time import sleep
-
-#
-# master = Tk()
-# master.geometry("3000x1000")
-# master.configure(bg='#c5dae6')
 window = Tk()
-
 window.geometry("3000x1000")
 window.configure(bg='#c5dae6')
+from PIL import Image, ImageTk
+
+root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'images')
+
+
+i1 = Image.open(os.path.join(root_path, "te.jpg"))
+te = ImageTk.PhotoImage(i1)
+l2 = Label(window, image=te, width=1420, height=700)
+l2.place(x=1, y=2)
 
 
 class Question:
@@ -35,9 +35,10 @@ class Question:
         view.pack_forget()
 
     def getView(self, window):
-        view = Frame(window, padx=16, pady=16)
-        view.place(x=500, y=300)
-        a = Label(view, text=self.question, font=('Verdana', 14, 'bold'), bg='#dddddd')
+        view = Frame(window, padx=12, pady=12)
+        view.place(x=300, y=200)
+        view.configure(bg='#696969')
+        a = Label(view, text=self.question, font=('Verdana', 15, 'bold'), bg='#696969')
         a.grid(row=2, column=2)
 
         def looping(loop_answers, rows, columns):
@@ -47,7 +48,7 @@ class Question:
             Button(view, text=loop_answers[0],
                    command=lambda *kwargs: self.check(self.answers.index(loop_answers[0]), view, rows, columns)).grid(
                 row=rows,
-                column=columns)
+                column=columns,sticky="ew")
             looping(loop_answers[1:], rows + 1, columns)
 
             return
@@ -65,8 +66,8 @@ def askQuestion():
     global questions, window, index, button, right, number_of_questions
     if (len(questions) == index + 1):
         Label(window,
-              text=f"Thank you for answering the questions\n Your percentage is {right * 100 / total_questions} ").place(
-            x=500, y=500)
+              text=f"Thank you for answering the questions\n Your percentage is {right * 100 / total_questions} ",font=('Verdana', 20, 'bold'),bg="#696969").place(
+            x=400, y=500)
 
         return
     button.pack_forget()
@@ -91,21 +92,7 @@ def get_questions(json_file_name):
         selected_questions.append(main_questions[rand_val])
     return selected_questions
 
-
-# file = open("questions.txt", "r")
-# line = file.readline()
-# while(line != ""):
-#     questionString = line
-#     answers = []
-#     for i in range (4):
-#         answers.append(file.readline())
-#
-#     correctLetter = file.readline()
-#     correctLetter = correctLetter[:-1]
-#     questions.append(Question(questionString, answers, correctLetter))
-#     line = file.readline()
-# file.close()
-total_questions = 3
+total_questions = 10
 index = -1
 right = 0
 questions = get_questions("questions.json")

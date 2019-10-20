@@ -68,25 +68,34 @@ h2.grid(row=14, column=1)
 
 
 def validation(username, password, phonenumber):
-    if not username[0].isupper():
-        messagebox.showerror(title="username error", message="First character should be capital")
-    if not re.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$", password):
-        messagebox.showerror(title="password error",
-                             message="password should contain 1 uppercase, 1 lowercase,1 numeric and 1 special character "
-                                     "and min 8 character and max 12 character ")
-    if not re.match('^[0-9]{10}$', phonenumber):
-        messagebox.showerror(title="phonenumber error", message="not a valid phone number")
+    flag=1
+    while True:
+        if not username[0].isupper():
+            messagebox.showerror(title="username error", message="First character should be capital")
+            flag=0
+            break
+        if not re.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$", password):
+            messagebox.showerror(title="password error",
+                                 message="password should contain 1 uppercase, 1 lowercase,1 numeric and 1 special character "
+                                         "and min 8 character and max 12 character ")
+            flag=0
+            break
+        if not re.match('^[0-9]{10}$', phonenumber):
+            messagebox.showerror(title="phonenumber error", message="not a valid phone number")
+            flag=0
+            break
+        if flag==1:
+            cur.execute(
+                'INSERT INTO `tutorial`.`register` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
+                (a2.get(), b2.get(), c2.get(), d2.get(), e2.get(), f2.get(), g2.get(), h2.get()))
+
+            connection.commit()
+            messagebox.showinfo("success", "login success!!!!")
+            learn()
 
 
 def submit():
     validation(username=a2.get(), password=b2.get(), phonenumber=e2.get())
-    cur.execute(
-        'INSERT INTO `tutorial`.`register` (`username`, `password`, `fname`, `lname`, `phoneno`, `email`, `course`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
-        (a2.get(), b2.get(), c2.get(), d2.get(), e2.get(), f2.get(), g2.get(), h2.get()))
-
-    connection.commit()
-    messagebox.showinfo("success", "login success!!!!")
-    learn()
 
 
 i1 = Button(f, text="SUBMIT", font=("times", 15, "bold"), command=submit, bg="#FF0000", bd=8)

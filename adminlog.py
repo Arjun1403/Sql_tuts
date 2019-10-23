@@ -1,9 +1,10 @@
 import os
 from tkinter import *
 from tkinter import messagebox
-from main_connection import con, cur
+from main_connection import connect
 from PIL import Image, ImageTk
 
+connection, cur = connect()
 root_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'images')
 master = Tk()
 master.geometry("1900x700")
@@ -26,7 +27,7 @@ d = Entry(f, width=20, bd=4, bg='#faf5e6', show='*')
 def login():
     username = c.get()
     password = d.get()
-    cur.execute("select uname,pword from login")
+    cur.execute("select username,password from login")
     var = cur.fetchall()
 
     if username == '' or password == '':
@@ -35,7 +36,7 @@ def login():
         master.destroy()
         adminuser()
     else:
-        cur.execute("select uname,pword from login")
+        cur.execute("select username,password from login")
         var = cur.fetchall()
         if username == '' or password == '':
             messagebox.showerror("Error", "Fields cannot be empty!")

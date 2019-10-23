@@ -46,11 +46,6 @@
       "answer_index": 1
     },
     {
-      "question": "To remove duplicate rows from the results of an SQL SELECT statement, the ________ qualifier specified must be included",
-      "options": ["ONLY","UNIQUE","DISTINCT","SINGLE"],
-      "answer_index": 2
-    },
-    {
       "question": " SQL query and modification commands make up a(n) ______",
       "options": ["DDL","DML","HTML","XML"],
       "answer_index": 1
@@ -58,11 +53,6 @@
     {
       "question": "Which of the following do you need to consider when you make a table in SQL? ",
       "options": ["Data types","Primary keys","Default values","All of the above"],
-      "answer_index": 3
-    },
-    {
-      "question": "When three or more AND and OR conditions are combined, it is easier to use the SQL keyword(s): ",
-      "options": ["LIKE only.","IN only.","NOT IN only.","Both IN and NOT IN."],
       "answer_index": 3
     },
     {
@@ -79,186 +69,7 @@
       "question": "The command to eliminate a table from a database is:",
       "options": ["REMOVE TABLE CUSTOMER;","DROP TABLE CUSTOMER;","DELETE TABLE CUSTOMER;","UPDATE TABLE CUSTOMER;"],
       "answer_index": 2
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
-    },
-    {
-      "question": "repeat",
-      "options": ["yes","no"],
-      "answer_index": 0
     }
+
   ]
 }

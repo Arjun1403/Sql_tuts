@@ -35,22 +35,17 @@ def login():
         messagebox.showerror("Error", "Fields cannot be empty!")
     elif (username, password) in var:
         master.destroy()
-        second = Tk()
-        print("user")
         learn()
-        second.mainloop()
     else:
-        cur.execute("select username,password from login")
+        cur.execute("select username,password from register")
         var = cur.fetchall()
         if username == '' or password == '':
             messagebox.showerror("Error", "Fields cannot be empty!")
         else:
             if (username, password) in var:
                 master.destroy()
-                second = Tk()
-                print("admin")
                 learn()
-                second.mainloop()
+
             else:
                 messagebox.showerror("Error", "login invaild!")
 
